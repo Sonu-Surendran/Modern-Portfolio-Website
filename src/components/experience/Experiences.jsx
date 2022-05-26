@@ -11,6 +11,8 @@ import {SiReact} from 'react-icons/si'
 import {SiJava} from 'react-icons/si'
 import {GrMysql} from 'react-icons/gr'
 import {SiPython} from 'react-icons/si'
+import ExpComponent from './ExpComponent'
+
 
 const Experiences = ()=> {
   return (
@@ -25,45 +27,11 @@ const Experiences = ()=> {
 
           <h3>frontend developement</h3>
           <div className="experiences__content">
-            <article className="experiences__details">
-              <AiFillHtml5 className="experiences__details-icon"/>
-              <div>
-                <h4>HTML</h4>
-                <small className='text-light'>Intermediate</small>
-              </div>
-            </article>
-            
-            <article className="experiences__details">
-              <DiCss3 className="experiences__details-icon"/>
-              <div>
-                <h4>CSS</h4>
-                <small className='text-light'>Intermediate</small>
-              </div>
-            </article>
-
-            <article className="experiences__details">
-              <IoLogoJavascript className="experiences__details-icon"/>
-              <div>
-                <h4>JavaScript</h4>
-                <small className='text-light'>Intermediate</small>
-              </div>
-            </article>
-
-            <article className="experiences__details">
-              <SiBootstrap className="experiences__details-icon"/>
-              <div>
-                <h4>BootStrap</h4>
-                <small className='text-light'>Basics</small>
-              </div>
-            </article>
-
-            <article className="experiences__details">
-              <SiReact className="experiences__details-icon"/>
-              <div>
-                <h4>ReactJS</h4>
-                <small className='text-light'>Intermediate</small>
-              </div>
-            </article>
+            <ExpComponent icon={AiFillHtml5} name="HTML" epe="Intermediate"/>
+            <ExpComponent icon={DiCss3} name="CSS" epe="Intermediate"/>
+            <ExpComponent icon={IoLogoJavascript} name="JavaScript" epe="Intermediate"/>
+            <ExpComponent icon={SiBootstrap} name="BootStrap" epe="Basic"/>
+            <ExpComponent icon={SiReact} name="ReactJs" epe="Intermediate"/>
           </div>
         </div>
 
@@ -73,31 +41,9 @@ const Experiences = ()=> {
         <div className="container container__backend">
         <h3>backend developement</h3>
           <div className="experiences__content">
-            <article className="experiences__details">
-              <SiJava className="experiences__details-icon"/>
-              <div>
-                <h4>Java</h4>
-                <small className='text-light'>Intermediate</small>
-              </div>
-            </article>
-            
-            <article className="experiences__details">
-              <GrMysql className="experiences__details-icon"/>
-              <div>
-                <h4>Mysql</h4>
-                <small className='text-light'>Intermediate</small>
-              </div>
-            </article>
-
-            <article className="experiences__details">
-              <SiPython className="experiences__details-icon"/>
-              <div>
-                <h4>Python</h4>
-                <small className='text-light'>Basics</small>
-              </div>
-            </article>
-
-            
+          <ExpComponent icon={SiJava} name="Java" epe="Intermediate"/>
+          <ExpComponent icon={GrMysql} name="Mysql" epe="Intermediate"/>
+          <ExpComponent icon={SiPython} name="Python" epe="Basic"/>
           </div>
           
         </div>

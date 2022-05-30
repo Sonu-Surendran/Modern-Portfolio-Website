@@ -1,10 +1,30 @@
 import React from 'react'
 import './contact.css'
+
+
 import {MdEmail} from 'react-icons/md'
 import {GrInstagram} from 'react-icons/gr'
 import {RiWhatsappFill} from 'react-icons/ri'
 
+import { useRef } from 'react';
+import emailjs from 'emailjs-com';
+
 function Contact() {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_h6gqhpk', 'template_nwrgmka', form.current, '1RWFpfqzKRtkIN3LS')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
+  };
+
   return (
     <section id="contact">
       <h5>Get in touch</h5>
@@ -30,7 +50,7 @@ function Contact() {
           </article>
         </div>
         
-        <form action="">
+        <form ref={form} onSubmit={sendEmail}>
           <input type="text" name="name" placeholder='Your Full Name' />
           <input type="email" name="email" placeholder='Your Email' />
           <textarea name="message" rows="10" placeholder='Your Message Here'></textarea>

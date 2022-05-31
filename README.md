@@ -1,3 +1,14 @@
+This is portfolio website for fresher and students
+
+To run this website you will NODE JS installed on your system
+
+In addition to that you will need an account in EmailJS website
+
+To start the server . Open the project in the directory where source and public folder located
+
+And type npm start in the console window of your editer *MY EDITER WAS VS-CODE*
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
